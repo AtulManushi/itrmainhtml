@@ -369,36 +369,59 @@ document.addEventListener("DOMContentLoaded", () => {
 
   
 
-
-<section class="grp">
-    <div class="gp">
-            <img src="images/clients.png">
-            <h1>2000+</h1>
-            <p>clients</p>
-            
-        </div>
-
-        <div class="gp">
-            <img src="images/client emoji png.png">
-            <h1>1853+</h1>
-            <p>Happy Clients</p>
-         
-        </div>
-
-        <div class="gp">
-            <img src="images/team.png">
-            <h1>50+</h1>
-            <p>Expert Team</p>
-           
-     </div>
-
-     <div class="gp">
-        <img src="images/sevices.png">
-        <h1>51+</h1>
-    <p>Services</p>
+<section class="py-16">
+  <div class="container mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+    
+    <!-- Card 1 -->
+    <div class="gp bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
+      <img src="images/clients.png" class="mx-auto mb-4 w-16 h-16 animate-bounce" alt="Clients Icon">
+      <h1 class="text-4xl font-bold text-yellow-500 mb-2 count" data-target="2000">0</h1>
+      <p class="text-gray-300 uppercase tracking-wide">Clients</p>
     </div>
+
+    <!-- Card 2 -->
+    <div class="gp bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
+      <img src="images/client emoji png.png" class="mx-auto mb-4 w-16 h-16 animate-bounce" alt="Happy Clients Icon">
+      <h1 class="text-4xl font-bold text-yellow-500 mb-2 count" data-target="1853">0</h1>
+      <p class="text-gray-300 uppercase tracking-wide">Happy Clients</p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="gp bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
+      <img src="images/team.png" class="mx-auto mb-4 w-16 h-16 animate-bounce" alt="Expert Team Icon">
+      <h1 class="text-4xl font-bold text-yellow-500 mb-2 count" data-target="50">0</h1>
+      <p class="text-gray-300 uppercase tracking-wide">Expert Team</p>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="gp bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
+      <img src="images/sevices.png" class="mx-auto mb-4 w-16 h-16 animate-bounce" alt="Services Icon">
+      <h1 class="text-4xl font-bold text-yellow-500 mb-2 count" data-target="51">0</h1>
+      <p class="text-gray-300 uppercase tracking-wide">Services</p>
+    </div>
+
+  </div>
 </section>
 
+<script>
+// Simple count-up animation for numbers
+const counters = document.querySelectorAll('.count');
+counters.forEach(counter => {
+  const updateCount = () => {
+    const target = +counter.getAttribute('data-target');
+    const count = +counter.innerText;
+    const increment = target / 200; // adjust speed
+
+    if(count < target){
+      counter.innerText = Math.ceil(count + increment);
+      setTimeout(updateCount, 15);
+    } else {
+      counter.innerText = target;
+    }
+  };
+  updateCount();
+});
+</script>
 
         <section class="regulatory-services">
   <div class="container mx-auto px-4 py-12">
