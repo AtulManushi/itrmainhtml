@@ -1,0 +1,105 @@
+<h2>GST Calculator – Add or Remove GST (With City Selection)</h2>
+
+<!-- Input Section -->
+<label>Enter Amount:</label><br>
+<input type="number" id="amount" placeholder="Enter amount"><br><br>
+
+<label>Select GST Rate:</label><br>
+<select id="gstRate">
+  <option value="5">5%</option>
+  <option value="12">12%</option>
+  <option value="18">18%</option>
+  <option value="28">28%</option>
+</select><br><br>
+
+<label>Transaction Type:</label><br>
+<input type="radio" name="type" value="add" checked> Add GST<br>
+<input type="radio" name="type" value="remove"> Remove GST<br><br>
+
+<label>Select Your City (Business Location):</label><br>
+<select id="city">
+  <option value="Delhi">Delhi</option>
+  <option value="Mumbai">Mumbai</option>
+  <option value="Chennai">Chennai</option>
+  <option value="Bangalore">Bangalore</option>
+</select><br><br>
+
+<label>Select Customer City (Billing Location):</label><br>
+<select id="customerCity">
+  <option value="Delhi">Delhi</option>
+  <option value="Mumbai">Mumbai</option>
+  <option value="Chennai">Chennai</option>
+  <option value="Bangalore">Bangalore</option>
+</select><br><br>
+
+<!-- Calculate Button -->
+<button onclick="calculateGST()">Calculate</button>
+
+<!-- Results -->
+<h3>Result:</h3>
+<div id="result" style="font-weight: bold;"></div>
+
+<script>
+function calculateGST() {
+  let amount = parseFloat(document.getElementById("amount").value);
+  let gstRate = parseFloat(document.getElementById("gstRate").value);
+  let type = document.querySelector('input[name="type"]:checked').value;
+  let city = document.getElementById("city").value;
+  let customerCity = document.getElementById("customerCity").value;
+
+  if (isNaN(amount) || amount <= 0) {
+    document.getElementById("result").innerHTML = "Please enter a valid amount.";
+    return;
+  }
+
+  let taxType = (city === customerCity) ? "CGST_SGST" : "IGST";
+  let gstAmount, finalAmount, resultText = "";
+
+  if (type === "add") {
+    gstAmount = (amount * gstRate) / 100;
+    finalAmount = amount + gstAmount;
+
+    if (taxType === "CGST_SGST") {
+      let half = gstAmount / 2;
+      resultText = `
+        Base Amount: ₹${amount.toFixed(2)}<br>
+        GST Rate: ${gstRate}%<br>
+        ➤ CGST: ₹${half.toFixed(2)}<br>
+        ➤ SGST: ₹${half.toFixed(2)}<br>
+        <span style="color: green;">Total Amount with GST: ₹${finalAmount.toFixed(2)}</span>
+      `;
+    } else {
+      resultText = `
+        Base Amount: ₹${amount.toFixed(2)}<br>
+        GST Rate: ${gstRate}%<br>
+        ➤ IGST: ₹${gstAmount.toFixed(2)}<br>
+        <span style="color: green;">Total Amount with GST: ₹${finalAmount.toFixed(2)}</span>
+      `;
+    }
+
+  } else if (type === "remove") {
+    gstAmount = (amount * gstRate) / (100 + gstRate);
+    finalAmount = amount - gstAmount;
+
+    if (taxType === "CGST_SGST") {
+      let half = gstAmount / 2;
+      resultText = `
+        Total Amount (Inclusive): ₹${amount.toFixed(2)}<br>
+        GST Rate: ${gstRate}%<br>
+        ➤ CGST: ₹${half.toFixed(2)}<br>
+        ➤ SGST: ₹${half.toFixed(2)}<br>
+        <span style="color: blue;">Base Amount without GST: ₹${finalAmount.toFixed(2)}</span>
+      `;
+    } else {
+      resultText = `
+        Total Amount (Inclusive): ₹${amount.toFixed(2)}<br>
+        GST Rate: ${gstRate}%<br>
+        ➤ IGST: ₹${gstAmount.toFixed(2)}<br>
+        <span style="color: blue;">Base Amount without GST: ₹${finalAmount.toFixed(2)}</span>
+      `;
+    }
+  }
+
+  document.getElementById("result").innerHTML = resultText;
+}
+</script>

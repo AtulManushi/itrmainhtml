@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GST Calculator</title>
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      @apply bg-gray-100 min-h-screen flex items-center justify-center p-4;
+    }
+    .calculator-container {
+      @apply bg-white rounded-lg shadow-lg p-6 w-full max-w-md md:max-w-lg;
+    }
+    .input-field, .select-field {
+      @apply w-full p-3 mb-4 border rounded-md text-base focus:outline-none focus:ring-2 focus:ring-blue-500;
+    }
+    .radio-group {
+      @apply flex flex-col sm:flex-row gap-4 mb-4;
+    }
+    .radio-label {
+      @apply flex items-center gap-2;
+    }
+    .calculate-btn {
+      @apply w-full bg-blue-600 text-white py-3 rounded-md hover:bg-blue-700 transition duration-200 text-base font-semibold;
+    }
+    .result {
+      @apply mt-6 text-base leading-7;
+    }
+    @media (max-width: 400px) {
+      h2 {
+        @apply text-lg;
+      }
+      .input-field, .select-field, .calculate-btn {
+        @apply text-sm;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator-container">
+    <h2 class="text-2xl font-bold mb-6 text-center">GST Calculator – Add or Remove GST</h2>
+
+    <!-- Input Section -->
+    <div class="mb-4">
+      <label class="block font-semibold mb-2">Enter Amount:</label>
+      <input type="number" id="amount" placeholder="Enter amount" class="input-field" min="0" step="0.01">
+    </div>
+
+    <div class="mb-4">
+      <label class="block font-semibold mb-2">Select GST Rate:</label>
+      <select id="gstRate" class="select-field">
+        <option value="5">5%</option>
+        <option value="12">12%</option>
+        <option value="18">18%</option>
+        <option value="28">28%</option>
+      </select>
+    </div>
+
+    <div class="mb-4">
+      <label class="block font-semibold mb-2">Transaction Type:</label>
+      <div class="radio-group">
+        <label class="radio-label">
+          <input type="radio" name="type" value="add" checked>
+          Add GST
+        </label>
+        <label class="radio-label">
+          <input type="radio" name="type" value="remove">
+          Remove GST
+        </label>
+      </div>
+    </div>
+
+    <div class="mb-4">
+      <label class="block font-semibold mb-2">Select Your City (Business Location):</label>
+      <select id="city" class="select-field">
+        <option value="Delhi">Delhi</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Chennai">Chennai</option>
+        <option value="Bangalore">Bangalore</option>
+      </select>
+    </div>
+
+    <div class="mb-4">
+      <label class="block font-semibold mb-2">Select Customer City (Billing Location):</label>
+      <select id="customerCity" class="select-field">
+        <option value="Delhi">Delhi</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Chennai">Chennai</option>
+        <option value="Bangalore">Bangalore</option>
+      </select>
+    </div>
+
+    <!-- Calculate Button -->
+    <button onclick="calculateGST()" class="calculate-btn">Calculate</button>
+
+    <!-- Results -->
+    <h3 class="text-xl font-semibold mt-6 mb-3">Result:</h3>
+    <div id="result" class="result font-bold"></div>
+  </div>
+
+  <script>
+    function calculateGST() {
+      let amount = parseFloat(document.getElementById("amount").value);
+      let gstRate = parseFloat(document.getElementById("gstRate").value);
+      let type = document.querySelector('input[name="type"]:checked').value;
+      let city = document.getElementById("city").value;
+      let customerCity = document.getElementById("customerCity").value;
+
+      if (isNaN(amount) || amount <= 0) {
+        document.getElementById("result").innerHTML = '<span class="text-red-500">Please enter a valid amount.</span>';
+        return;
+      }
+
+      let taxType = (city === customerCity) ? "CGST_SGST" : "IGST";
+      let gstAmount, finalAmount, resultText = "";
+
+      if (type === "add") {
+        gstAmount = (amount * gstRate) / 100;
+        finalAmount = amount + gstAmount;
+
+        if (taxType === "CGST_SGST") {
+          let half = gstAmount / 2;
+          resultText = `
+            Base Amount: ₹${amount.toFixed(2)}<br>
+            GST Rate: ${gstRate}%<br>
+            ➤ CGST: ₹${half.toFixed(2)}<br>
+            ➤ SGST: ₹${half.toFixed(2)}<br>
+            <span class="text-green-600">Total Amount with GST: ₹${finalAmount.toFixed(2)}</span>
+          `;
+        } else {
+          resultText = `
+            Base Amount: ₹${amount.toFixed(2)}<br>
+            GST Rate: ${gstRate}%<br>
+            ➤ IGST: ₹${gstAmount.toFixed(2)}<br>
+            <span class="text-green-600">Total Amount with GST: ₹${finalAmount.toFixed(2)}</span>
+          `;
+        }
+      } else {
+        gstAmount = (amount * gstRate) / (100 + gstRate);
+        finalAmount = amount - gstAmount;
+
+        if (taxType === "CGST_SGST") {
+          let half = gstAmount / 2;
+          resultText = `
+            Total Amount (Inclusive): ₹${amount.toFixed(2)}<br>
+            GST Rate: ${gstRate}%<br>
+            ➤ CGST: ₹${half.toFixed(2)}<br>
+            ➤ SGST: ₹${half.toFixed(2)}<br>
+            <span class="text-blue-600">Base Amount without GST: ₹${finalAmount.toFixed(2)}</span>
+          `;
+        } else {
+          resultText = `
+            Total Amount (Inclusive): ₹${amount.toFixed(2)}<br>
+            GST Rate: ${gstRate}%<br>
+            ➤ IGST: ₹${gstAmount.toFixed(2)}<br>
+            <span class="text-blue-600">Base Amount without GST: ₹${finalAmount.toFixed(2)}</span>
+          `;
+        }
+      }
+
+      document.getElementById("result").innerHTML = resultText;
+    }
+  </script>
+</body>
+</html>

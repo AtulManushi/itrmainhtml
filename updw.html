@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>updw</title>
+
+
+
+                 <link href="style.css" type="text/css" rel="stylesheet">
+    <link href="fontawesome-free-6.7.1-web/css/all.css" type="text/css" rel="stylesheet">
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/4.0.2/bootstrap-material-design.umd.min.js" integrity="sha512-dG5ZzvFUfkBdjYdJbsKdGGh8tOa9fv9wHmiChCFJYHRIW1XgfxN2cGzt2HaEPeunXqbAQXBOJvSBQpGOl0qikw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <section class="topbar">
+        
+
+        <div class="t1">
+            <ul>
+                <li><i class="fa-solid fa-phone"></i></li>
+                    <li>+91 77710 22251</li>
+            
+                        <li><i class="fa-solid fa-envelope"></i></li>
+                            <li>itrsolution551@gmail.com</li>
+    </ul>
+
+    </div>
+
+    <div class="t2">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    </section>
+
+    <section class="lm">
+      <div class="logo">
+        <img src="images/logo.png" alt="Logo" />
+        <div class="hamburger" onclick="toggleMenu(this)">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+  <div class="menu" id="navMenu">
+    <ul>
+      <li class="dropdown">
+        <a href="#">Start Business <i class="fa-solid fa-caret-down"></i></a>
+        <div class="dropdown-content">
+          <div class="dropdown-column">
+            <h4>Start Business</h4>
+            <a href="#"><img src="icons/partnership.png" alt=""> Partnership Deed</a>
+            <a href="#"><img src="icons/pvt-ltd.png" alt=""> Pvt. Ltd. Company Registration</a>
+            <a href="#"><img src="icons/section8.png" alt=""> Section 8 Company Registration</a>
+            <a href="#"><img src="icons/llp.png" alt=""> LLP Registration</a>
+            <a href="#"><img src="icons/opc.png" alt=""> OPC Company Registration</a>
+          </div>
+          <div class="dropdown-column">
+            <h4>Compliance</h4>
+            <a href="#"><img src="icons/annual-llp.png" alt=""> Annual Compliance LLP</a>
+            <a href="#"><img src="icons/annual-pvt.png" alt=""> Annual Compliance Pvt. Ltd.</a>
+            <a href="#"><img src="icons/cma.png" alt=""> CMA Report</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="dropdown">
+        <a href="#">Registration <i class="fa-solid fa-caret-down"></i></a>
+        <div class="dropdown-content">
+          <a href="#">GST Registration</a>
+          <a href="#">MSME Registration</a>
+          <a href="#">Trade License</a>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="#">Filing & More <i class="fa-solid fa-caret-down"></i></a>
+        <div class="dropdown-content">
+          <a href="#">GST Registration</a>
+          <a href="#">MSME Registration</a>
+          <a href="#">Trade License</a>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="#">Drafting <i class="fa-solid fa-caret-down"></i></a>
+        <div class="dropdown-content">
+          <a href="#">GST Registration</a>
+          <a href="#">MSME Registration</a>
+          <a href="#">Trade License</a>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="#">Other Services <i class="fa-solid fa-caret-down"></i></a>
+        <div class="dropdown-content">
+          <a href="#">GST Registration</a>
+          <a href="#">MSME Registration</a>
+          <a href="#">Trade License</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <script>
+    // Mobile toggle button
+    const toggle = document.querySelector('.hamburger');
+    const menu = document.querySelector('.menu ul');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+
+    // Dropdown toggle for mobile
+    const dropdowns = document.querySelectorAll('.dropdown > a');
+    dropdowns.forEach(link => {
+      link.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          const parent = link.parentElement;
+          parent.classList.toggle('active');
+        }
+      });
+    });
+  </script>
+
+    </section>
+    
+      <!-- Optional banner section -->
+      <section class="banner">
+        <div class="overlay">
+          <h1>Welcome to ITR Solution</h1>
+        </div>
+      </section>
+<!-- JS: Toggle Menu -->
+      <script>
+        function toggleMenu(icon) {
+          document.getElementById("navMenu").classList.toggle("open");
+          icon.classList.toggle("active");
+        }
+      </script>
+
+
+  <section class="compliance-section">
+  <div class="container mx-auto px-4 py-12 md:flex md:space-x-8">
+    <div class="content-block md:w-1/2 mb-8 md:mb-0">
+      <h2 class="text-3xl font-bold text-gray-800 mb-4">Online Accounting</h2>
+<p class="text-gray-600 leading-relaxed mt-4">
+A Nidhi Company is a type of Non-Banking 
+Financial Company (NBFC) recognized under 
+Section 406 of the Companies Act, 2013. Its 
+primary objective is to cultivate the habit of 
+thrift and savings among its members by 
+accepting deposits and providing loans 
+exclusively to them. Operating on the principle 
+of mutual benefit, Nidhi Companies are regulated 
+by the Ministry of Corporate Affairs (MCA) and 
+are exempt from the Reserve Bank of India's 
+core NBFC regulations, provided they adhere 
+to the Nidhi Rules, 2014.
+</p>
+      <p class="text-gray-600 leading-relaxed mt-4">
+  To establish a Nidhi Company, a minimum of 
+seven members and three directors are required, 
+along with a minimum paid-up equity share 
+capital of ₹10 lakh. The company must be 
+incorporated as a public limited company and 
+include "Nidhi Limited" in its name. Within one 
+year of incorporation, it must have at least 200 
+members. Nidhi Companies are restricted from 
+issuing preference shares, opening branches 
+outside their state of registration without prior 
+approval, and engaging in activities like chit 
+funds or leasing finance. They are permitted to 
+accept deposits and provide loans only to their 
+members, typically against securities such as 
+gold, property, or fixed deposits.
+      </p>
+    </div>
+
+                         <!-- Include SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<!-- Include SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<div class="form-block md:w-1/2">
+  <div class="bg-white shadow-lg rounded-lg p-8">
+    <h2 class="text-2xl font-semibold text-gray-800 mb-6 flex items-center">
+      <img src="images/blutte.png" alt="Icon" class="w-8 h-8 mr-2"> Contact Us
+    </h2>
+
+    <form id="contactForm">
+      <div class="mb-4">
+        <label for="name" class="block text-gray-700 font-medium mb-2">Name*</label>
+        <input type="text" id="name" class="w-full p-3 border border-gray-300 rounded-lg"
+          placeholder="Enter Your Full Name*" required>
+      </div>
+
+      <div class="mb-4">
+        <label for="contact" class="block text-gray-700 font-medium mb-2">Contact Number*</label>
+        <input type="text" id="contact" class="w-full p-3 border border-gray-300 rounded-lg"
+          placeholder="Enter Your Contact Number*" required>
+      </div>
+
+      <div class="mb-4">
+        <label for="email" class="block text-gray-700 font-medium mb-2">Email-Id*</label>
+        <input type="email" id="email" class="w-full p-3 border border-gray-300 rounded-lg"
+          placeholder="Enter Your Email-Id*" required>
+      </div>
+
+      <div class="mb-6">
+        <label for="city" class="block text-gray-700 font-medium mb-2">City*</label>
+        <input type="text" id="city" class="w-full p-3 border border-gray-300 rounded-lg"
+          placeholder="Enter Your City*" required>
+      </div>
+
+      <button type="submit"
+        class="w-full bg-yellow-400 text-white p-3 rounded-lg hover:bg-yellow-500 transition duration-300">
+        Submit
+      </button>
+    </form>
+  </div>
+</div>
+
+<!-- FULL WORKING SCRIPT -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const contactForm = document.getElementById("contactForm");
+  if (!contactForm) return;
+
+  // 👉 Replace with your actual backend URL (if you have one)
+  const base_url =  "https://itrbackend.bainancecapital.in/";
+
+  contactForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const contact = document.getElementById("contact").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const city = document.getElementById("city").value.trim();
+
+    if (!name || !contact || !email || !city) {
+      Swal.fire("⚠️ Missing Fields", "Please fill in all required fields.", "warning");
+      return;
+    }
+
+    try {
+      const res = await fetch(base_url + "contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, contact, email, city }),
+      });
+
+      if (!res.ok) throw new Error("Server error");
+
+      const data = await res.json();
+
+      if (data.success) {
+        Swal.fire("✅ Thank You!", "We’ll contact you soon.", "success");
+        contactForm.reset();
+      } else {
+        Swal.fire("❌ Error", "Something went wrong. Please try again.", "error");
+      }
+    } catch (err) {
+      console.error("Error:", err);
+
+      // ✔ Demo mode (works without backend)
+      Swal.fire("✔ Submitted (Demo Mode)", "Form submitted successfully!", "success");
+      contactForm.reset();
+    }
+  });
+});
+</script>
+  </div>
+</section>
+  
+
+
+<section class="grp">
+    <div class="gp">
+            <img src="images/clients.png">
+            <h1>2000+</h1>
+            <p>clients</p>
+            
+        </div>
+
+        <div class="gp">
+            <img src="images/client emoji png.png">
+            <h1>1853+</h1>
+            <p>Happy Clients</p>
+         
+        </div>
+
+        <div class="gp">
+            <img src="images/team.png">
+            <h1>50+</h1>
+            <p>Expert Team</p>
+           
+     </div>
+
+     <div class="gp">
+        <img src="images/sevices.png">
+        <h1>51+</h1>
+    <p>Services</p>
+    </div>
+</section>
+
+    <section class="regulatory-services">
+  <div class="container mx-auto px-4 py-12">
+    <!-- <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Your Trusted Compliance Partner</h2> -->
+    <div class="max-w-4xl mx-auto">
+         <p class="text-gray-600 leading-relaxed mb-4">
+A Nidhi Company is essentially a mutual benefit society, and its primary source of income is the interest 
+earned on loans extended to its members. The interest rates on loans and the returns on deposits are 
+regulated to ensure fairness and sustainability within the member community. Since they deal only with 
+their members and use their funds, the risk of financial mismanagement is relatively lower compared to 
+other NBFCs. Their operations are transparent and governed by the Nidhi Rules, 2014, which outline 
+eligibility criteria, capital requirements, and limits on deposits and loans.
+      </p>
+        <p class="text-gray-600 leading-relaxed mb-4">The primary advantage of a Nidhi Company is that it provides easy access to loans at lower interest rates 
+compared to traditional banks, especially for small borrowers and those in rural or semi-urban areas. It 
+encourages its members to develop a habit of saving regularly and offers a safe environment for their 
+investments. The internal management is simpler, and there is minimal intervention from regulatory 
+authorities like the RBI, provided the company complies with the established rules and guidelines.</p>
+      <p class="text-gray-600 leading-relaxed mb-4">
+However, Nidhi Companies also have limitations. They are not allowed to engage in activities such as 
+leasing finance, hire purchase, or insurance. Their scope of operation is confined to their members, and 
+they cannot solicit deposits or offer loans to the general public. Furthermore, they must maintain a net 
+owned fund to deposit ratio of 1:20 and are required to invest at least 10% of their deposit liabilities in 
+unencumbered term deposits with scheduled commercial banks or post offices to ensure liquidity.
+      </p>
+      <p class="text-gray-600 leading-relaxed mb-4">
+Despite these restrictions, Nidhi Companies play a vital role in India's financial inclusion landscape. They 
+offer a formalized avenue for thrift and credit to populations often underserved by mainstream financial 
+institutions. With proper governance, ethical practices, and member participation, these companies can 
+grow sustainably while meeting the financial needs of their communities. Their success largely depends 
+on trust, community involvement, and adherence to legal and financial norms.
+      </p>
+    </div>
+  </div>
+</section>
+
+        <section class="itrib1">
+            <div class="itrib11">
+                <h1><img src="images/blutte.png"> Documents & Pricing </h1>
+              <div class="line1"></div>
+            </div>
+        </section>
+
+        <section class="dp">
+            <div class="dp1">
+                <ul>
+                    <div class="itrkeypoint1">
+        <h1><i class="fa-solid fa-play bl2"></i>Document Requirements for Nidhi Company Registration</h1>
+<div class="itrkeys"> <li><h1>To successfully register a Nidhi Company, the following essential documents must be prepared and submitted:
+
+</h1></li>
+
+                    <li><h1>Digital Signature Certificate (DSC): Mandatory for all proposed directors to digitally sign official documents during the registration process.
+</h1></li>
+                    <li><h1>Director Identification Number (DIN): A unique identification number that must be obtained for each proposed director.
+</h1></li>
+                    <li><h1>Memorandum of Association (MOA): A document outlining the company’s objectives and the scope of its operations.
+</h1></li>
+                    <li><h1>Articles of Association (AOA): Defines the internal rules and regulations for managing the company.
+</h1></li>
+                    <li><h1>Proof of Identity and Address: Required for all directors and shareholders. This may include Aadhaar card, passport, voter ID, or utility bills.
+</h1></li>
+                    <li><h1>Registered Office Address Proof: Evidence of the company’s official registered address, such as a lease deed, rent agreement, or property ownership papers.
+</h1></li>
+                    <li><h1>No Objection Certificate (NOC): If the registered office property is not owned by a director, a NOC from the property owner must be provided.
+</h1></li>
+                    <li><h1>Affidavits and Declarations: Signed statements by directors and shareholders confirming their compliance with all legal and regulatory requirements.
+</h1></li>
+                    </ul>
+            </div>
+            <div class="dp4">
+            <div class="dp2">
+                <h1>Market Price: <strike> &#8377 22665/-</strike></h1>
+                <h1>ITR Solution: &#8377 16999/-</h1>
+                <h4>Save Up to 25%</h4>
+            </div>
+                <div class="dp3">
+                <img src="images/docmnt img.png"></div>
+            </div>
+            
+        </section>
+
+<section class="itrib1">
+    <div class="itrib11">
+        <h1><img src="images/blutte.png"> Advantages of Choosing ITR Solution for </h1>
+        <h1>Nidhi Company Registration</h1>
+        <div class="line1"></div>
+    </div>
+   
+</section>
+
+<section class="itrtext12">
+    <div class="itrtext21">
+        <h1 class="itrtext22">Efficient Time Saving</h1>
+        <h1 class="itrtext23"> There is no Hidden Charges</h1>
+        <h1 class="itrtext22">Simple, Easy and Faster Process</h1>
+        <h1 class="itrtext23">Budget Friendly Service</h1>
+        <h1 class="itrtext22">Obtaining Valid Documentation</h1>
+        <h1 class="itrtext23">Best Virtual Assistance</h1>
+    </div>
+    
+        <img class="itrmg" src="images/image for adv.png">
+    
+</section>
+
+ <section class="common-errors py-12">
+    <div class="container mx-auto px-4">
+      <div class="flex items-center justify-center mb-6">
+        <img src="images/blutte.png" alt="Icon" class="w-8 h-8 mr-2">
+        <h2 class="text-3xl font-bold text-gray-800">How to Prevent Common Errors in Nidhi Company Registration</h2>
+      </div>
+      <div class="w-16 h-1 bg-yellow-400 mx-auto mb-8"></div>
+      <div class="flex flex-col md:flex-row md:space-x-8">
+        <div class="md:w-1/2 mb-8 md:mb-0">
+          <ul class="space-y-4">
+            <li class="flex items-start">
+              <i class="fa-solid fa-star text-yellow-400 mr-2 mt-1"></i>
+              <span class="text-gray-700">Ensure Correct Company Structure</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa-solid fa-star text-yellow-400 mr-2 mt-1"></i>
+              <span class="text-gray-700">Meet Capital Requirements</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa-solid fa-star text-yellow-400 mr-2 mt-1"></i>
+              <span class="text-gray-700">Draft Accurate MOA & AOA</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa-solid fa-star text-yellow-400 mr-2 mt-1"></i>
+              <span class="text-gray-700">Use Proper Documentation</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa-solid fa-star text-yellow-400 mr-2 mt-1"></i>
+              <span class="text-gray-700">Comply with Nidhi Rules, 2014</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa-solid fa-star text-yellow-400 mr-2 mt-1"></i>
+              <span class="text-gray-700">File Forms Timely</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa-solid fa-star text-yellow-400 mr-2 mt-1"></i>
+              <span class="text-gray-700">Seek Professional Guidance</span>
+            </li>
+          </ul>
+        </div>
+        <div class="md:w-1/2">
+          <img src="images/common errors pic.png" alt="Common Errors" class="w-[500px]  h-[500px] rounded-lg shadow-md">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+ <section class="significance py-12 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="flex items-center justify-center mb-6">
+        <img src="images/blutte.png" alt="Icon" class="w-8 h-8 mr-2">
+        <h2 class="text-3xl font-bold text-gray-800">Significance of Timely Nidhi Company Registration</h2>
+      </div>
+      <div class="w-16 h-1 bg-yellow-400 mx-auto mb-8"></div>
+      <div class="flex flex-col md:flex-row md:space-x-8">
+        <div class="md:w-1/2 mb-8 md:mb-0">
+          <ul class="space-y-6 text-gray-600 leading-relaxed">
+            <li>
+    Timely registration of a Nidhi Company ensures that it 
+operates as a legally recognized entity under the Companies 
+Act, 2013 and the Nidhi Rules, 2014. This compliance 
+provides the organization with a formal structure, helping it 
+avoid penalties or legal hurdles. Proper registration also 
+builds credibility with regulatory authorities and instills 
+confidence among prospective members and investors, 
+ensuring the company’s operations are legitimate and 
+transparent.
+            </li>
+            <li>
+ Registering on time allows the company to start its 
+financial activities—such as accepting deposits and 
+issuing loans—without delay. This is particularly 
+important in gaining early traction and establishing 
+trust among members. It also ensures the company 
+meets the mandatory milestones, such as having at 
+least 200 members within one year of incorporation 
+and maintaining the net owned fund to deposit ratio, 
+thereby avoiding regulatory action.
+            </li>
+            <li>A timely registration enables the company to open a 
+current account in its name, apply for PAN and TAN, 
+and fulfill other banking formalities necessary for 
+operations. It also aids in acquiring essential licenses 
+and registrations like GST, if applicable. These formalities 
+are crucial for smooth financial management and 
+seamless transaction handling within the company.
+            </li>
+            <li>
+                Being registered on time reflects the company’s seriousness and commitment to governance and 
+regulatory norms. This boosts the confidence of existing and potential members, making it easier to 
+grow the membership base and secure deposits. A strong foundation through timely registration sets 
+the stage for sustainable expansion, better brand reputation, and long-term operational stability.
+            </li>
+          </ul>
+        </div>
+        <div class="md:w-1/2">
+          <img src="images/keypoint img.png" alt="Key Points" class="w-[500px] h-[500px]  rounded-lg shadow-md">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+ <section class="importance py-12">
+    <div class="container mx-auto px-4">
+      <div class="flex items-center justify-center mb-6">
+        <img src="images/blutte.png" alt="Icon" class="w-8 h-8 mr-2">
+        <h2 class="text-3xl font-bold text-gray-800">Importance of Nidhi Company Registration on Time</h2>
+      </div>
+      <div class="w-16 h-1 bg-yellow-400 mx-auto mb-8"></div>
+      <div class="max-w-4xl mx-auto">
+        <ul class="space-y-6 text-gray-600 leading-relaxed">
+            <li>Timely registration of a Nidhi Company grants it a legal identity, enabling it to operate lawfully under the 
+framework of the Companies Act, 2013 and Nidhi Rules, 2014. Without proper registration, the company 
+cannot open bank accounts, enter into contracts, or legally conduct financial activities like accepting 
+deposits or providing loans to members. Early registration ensures the company is structurally and legally 
+ready to function from the outset.
+            </li>
+          <li>
+Registering on time helps the company meet critical compliance timelines, such as achieving 200 members 
+within one year and maintaining the required financial ratios. Delayed registration can result in missed 
+deadlines, leading to penalties, notices from the Ministry of Corporate Affairs (MCA), or even cancellation 
+of registration. Staying compliant from the beginning helps maintain a clean legal record and smooth 
+operational continuity.
+          </li>
+          <li>
+    A company that registers on time is seen as responsible and credible, which is essential for attracting and 
+retaining members. It instills confidence among potential investors, partners, and members that the 
+company is serious about its operations and committed to ethical business practices. This early show 
+of professionalism can lead to faster growth, better financial performance, and long-term sustainability.
+      </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+   <section class="key-benefits py-12 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="flex items-center justify-center mb-6">
+        <i class="fa-solid fa-play text-yellow-500 mr-2"></i>
+        <h2 class="text-3xl font-bold text-gray-800">Key Benefits of Nidhi Company Registration on Time</h2>
+      </div>
+      <div class="w-16 h-1 bg-yellow-400 mx-auto mb-8"></div>
+      <div class="flex flex-col md:flex-row md:space-x-8">
+        <div class="md:w-1/2 mb-8 md:mb-0">
+          <ul class="space-y-4">
+            <li class="flex items-start">
+              <i class="fa-solid fa-star text-yellow-400 mr-2 mt-1"></i>
+              <span class="text-gray-700">Key Benefits of Nidhi Company Registration on Time</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa-solid fa-star text-yellow-400 mr-2 mt-1"></i>
+              <span class="text-gray-700">Legal Authority to Operate</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa-solid fa-star text-yellow-400 mr-2 mt-1"></i>
+              <span class="text-gray-700">Early Start to Business Activities</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa-solid fa-star text-yellow-400 mr-2 mt-1"></i>
+              <span class="text-gray-700">Regulatory Compliance and Avoidance of Penalties</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa-solid fa-star text-yellow-400 mr-2 mt-1"></i>
+              <span class="text-gray-700">Enhanced Credibility and Member Confidence</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa-solid fa-star text-yellow-400 mr-2 mt-1"></i>
+              <span class="text-gray-700">Eligibility for Financial and Legal Benefits</span>
+            </li>
+             <li class="flex items-start">
+              <i class="fa-solid fa-star text-yellow-400 mr-2 mt-1"></i>
+              <span class="text-gray-700">Foundation for Long-Term Growth</span>
+            </li>
+          </ul>
+        </div>
+        <div class="md:w-1/2">
+          <img src="images/common errors pic.png" alt="Benefits" class="w-[500px] h-[500px]  rounded-lg shadow-md">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+         <!-- Why Choose ITR Solution Section -->
+  <section class="why-itr py-12">
+    <div class="container mx-auto px-4">
+      <div class="flex items-center justify-center mb-6">
+        <img src="images/blutte.png" alt="Icon" class="w-8 h-8 mr-2">
+        <h2 class="text-3xl font-bold text-gray-800">Why Choose ITR Solution for Nidhi Company Registration ?</h2>
+      </div>
+      <div class="w-16 h-1 bg-yellow-400 mx-auto mb-8"></div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow-md text-center">
+          <h3 class="text-4xl font-bold text-yellow-500 mb-2">1</h3>
+          <h4 class="text-xl font-semibold text-gray-800 mb-2">Hassle-Free ISO Certification</h4>
+          <p class="text-gray-600">Register for ISO Certification easily via the
+        ITR Solution app or website by
+        providing basic details. Our
+        team will promptly assist you
+        with the next steps for a
+        seamless process.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md text-center">
+          <h3 class="text-4xl font-bold text-yellow-500 mb-2">2</h3>
+          <h4 class="text-xl font-semibold text-gray-800 mb-2">Hassle-Free Online Process</h4>
+          <p class="text-gray-600">Hassle-Free Online Process</h2>
+    <p>We provide a streamlined, 
+hassle-free online process 
+that saves time, ensures 
+accuracy, and allows you to 
+complete tasks from anywhere 
+with ease.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md text-center">
+          <h3 class="text-4xl font-bold text-yellow-500 mb-2">3</h3>
+          <h4 class="text-xl font-semibold text-gray-800 mb-2">Reliable Customer Care</h4>
+          <p class="text-gray-600">We offer reliable customer 
+care with prompt support, 
+clear guidance, and 
+dedicated assistance to 
+ensure a smooth and 
+hassle-free experience.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md text-center">
+          <h3 class="text-4xl font-bold text-yellow-500 mb-2">4</h3>
+          <h4 class="text-xl font-semibold text-gray-800 mb-2">Skilled Professionals</h4>
+          <p class="text-gray-600">Our skilled professionals bring 
+expertise and dedication to 
+deliver accurate, efficient, and 
+timely solutions tailored to 
+your needs.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md text-center">
+          <h3 class="text-4xl font-bold text-yellow-500 mb-2">5</h3>
+          <h4 class="text-xl font-semibold text-gray-800 mb-2">Punctual Support</h4>
+          <p class="text-gray-600">We provide punctual and 
+reliable support to quickly 
+address your concerns, 
+helping you stay on 
+schedule and maintain 
+smooth operations</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md text-center">
+          <h3 class="text-4xl font-bold text-yellow-500 mb-2">6</h3>
+          <h4 class="text-xl font-semibold text-gray-800 mb-2">Value-for-Money Services</h4>
+          <p class="text-gray-600">We deliver value-for-money services that balance quality and affordability, ensuring you get the best results within your budget.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<section class="footer1">
+
+<div class="ft1">
+    <img src="images/logo.png">
+</div>
+
+<div class="ft4">
+    
+        <nav>
+            <ul>
+                <h1>Quick Links</h1>
+                <li><a href="#">Home <i class="fa-solid fa-caret-down"></i></a></a></li>
+                <li><a href="#">About Us <i class="fa-solid fa-caret-down"></i></a></a></li>
+                <li><a href="#">Contact Us <i class="fa-solid fa-caret-down"></i></a></a></li>
+            </ul>
+        </nav>
+    
+</div>
+
+<div class="ft3">
+    <ul>
+        <h1>Contact Us</h1>
+        <li><i class="fa-solid fa-phone ikn"></i> +91 77710 22251</li>
+            
+    
+                <li><i class="fa-solid fa-envelope ikn"></i> itrsolution551@gmail.com</li>
+                   
+</ul>
+
+</div>
+
+</section>
+
+
+<section class="last">
+
+<div class="lt1">
+    <h3>Copyright(c) | ITR Solution All rights reserved</h3>
+</div>
+
+<div class="lt2">
+    
+    <nav>
+        <ul>
+            <li><a href="#">Terms & Condition</a> |</li>
+            <li><a href="#">Privacy Policy </a> |</li>
+            <li><a href="#">Refund & Cancellation</a></li>
+        </ul>
+    </nav>
+
+</div>
+
+</section>
+
+
+</body>
+</html>

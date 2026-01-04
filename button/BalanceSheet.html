@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ITR Payment</title>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<style>
+/* ---------- General Body ---------- */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 40px 20px;
+  margin: 0;
+}
+
+/* ---------- Form Card ---------- */
+#paymentForm {
+  background: #fff;
+  border-radius: 20px;
+  padding: 30px 25px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+#paymentForm h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: 600;
+  color: #343a40;
+  font-size: 22px;
+}
+
+/* ---------- Floating Label Inputs ---------- */
+.form-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.form-group label {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  background: #fff;
+  padding: 0 4px;
+  color: #aaa;
+  font-size: 14px;
+  pointer-events: none;
+  transition: 0.3s ease all;
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group select:focus + label,
+.form-group select:not([value=""]) + label {
+  top: -8px;
+  left: 10px;
+  font-size: 12px;
+  color: #ff8c00;
+}
+
+/* ---------- Submit Button ---------- */
+#paymentForm button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #ff8c00, #ffb347);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+
+#paymentForm button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 500px) {
+  #paymentForm {
+    padding: 25px 20px;
+  }
+  #paymentForm button {
+    font-size: 15px;
+    padding: 10px;
+  }
+}
+</style>
+</head>
+<body>
+
+<form id="paymentForm">
+  <h2>ITR Solution Payment</h2>
+
+  <div class="form-group">
+    <input type="text" name="name" placeholder=" " required />
+    <label>Full Name</label>
+  </div>
+
+  <div class="form-group">
+    <input type="email" name="email" placeholder=" " required />
+    <label>Email Address</label>
+  </div>
+
+  <div class="form-group">
+    <input type="tel" name="contact" placeholder=" " required />
+    <label>Contact Number</label>
+  </div>
+
+  <div class="form-group">
+    <select name="service" required>
+      <option value="" disabled selected hidden></option>
+      <option value="Balance Sheet Registration">Balance Sheet</option>
+    </select>
+    <label>Choose Service</label>
+  </div>
+
+  <div class="form-group">
+    <input type="text" name="location" placeholder=" " />
+    <label>Location (optional)</label>
+  </div>
+
+  <button type="submit">Pay ₹799</button>
+</form>
+
+<script>
+const base_url = "https://itrbackend.bainancecapital.in/";
+const paymentForm = document.getElementById("paymentForm");
+
+paymentForm.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const formData = {
+    name: paymentForm.name.value,
+    email: paymentForm.email.value,
+    contact: paymentForm.contact.value,
+    location: paymentForm.location.value,
+    service: paymentForm.service.value,
+  };
+
+  const plan = "ITR Solution";
+  const amount = 799;
+  const tenure = "1 Year";
+
+  try {
+    const res = await fetch(`${base_url}create-order`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ plan, amount, tenure, ...formData })
+    });
+
+    const orderData = await res.json();
+
+    const options = {
+      key: "rzp_test_RaNSgYB3Dkk5Tk",
+      amount: orderData.amount,
+      currency: orderData.currency,
+      name: "ITR Solution",
+      description: `${plan} Plan Payment`,
+      order_id: orderData.id,
+      prefill: {
+        name: formData.name,
+        email: formData.email,
+        contact: formData.contact
+      },
+      theme: { color: "#ff8c00" },
+
+      /* ------------------------------ */
+      /* 🔥 SUCCESS HANDLER WITH REDIRECT */
+      /* ------------------------------ */
+      handler: async function(response) {
+        await fetch(`${base_url}verify-payment`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            order_id: orderData.id,
+            payment_id: response.razorpay_payment_id,
+            signature: response.razorpay_signature,
+          }),
+        });
+
+        Swal.fire({
+          title: "✅ Payment Successful!",
+          text: `Thank you for purchasing the ${plan}.`,
+          icon: "success",
+          confirmButtonColor: "#ff8c00",
+          timer: 2000,
+          showConfirmButton: false
+        });
+
+        setTimeout(() => {
+          window.location.href = "/Balance Sheet.html";  /* 🔥 Redirect after success */
+        }, 2000);
+
+        paymentForm.reset();
+      },
+    };
+
+    const rzp = new Razorpay(options);
+    rzp.open();
+
+  } catch (err) {
+    console.error("Payment Error:", err);
+    Swal.fire({
+      title: "❌ Payment Failed",
+      text: "Something went wrong. Please try again later.",
+      icon: "error",
+      confirmButtonColor: "#ff8c00",
+    });
+  }
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>itr return</title>
+
+
+
+  <link href="style.css" type="text/css" rel="stylesheet">
+    <link href="fontawesome-free-6.7.1-web/css/all.css" type="text/css" rel="stylesheet">
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/4.0.2/bootstrap-material-design.umd.min.js" integrity="sha512-dG5ZzvFUfkBdjYdJbsKdGGh8tOa9fv9wHmiChCFJYHRIW1XgfxN2cGzt2HaEPeunXqbAQXBOJvSBQpGOl0qikw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+<body>
+
+    
+      <section class="topbar">
+        
+
+        <div class="t1">
+            <ul>
+                <li><i class="fa-solid fa-phone"></i></li>
+                    <li>+91 77710 22251</li>
+            
+                        <li><i class="fa-solid fa-envelope"></i></li>
+                            <li>itrsolution551@gmail.com</li>
+    </ul>
+
+    </div>
+
+    <div class="t2">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    </section>
+
+  <section class="lm">
+  <div class="logo">
+    <img src="images/logo.png" alt="Logo" />
+    <div class="hamburger" onclick="toggleMenu(this)">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <div class="menu" id="navMenu">
+    <ul>
+      <!-- START BUSINESS -->
+      <li class="dropdown">
+        <a href="#">Start Business <i class="fa-solid fa-caret-down"></i></a>
+        <div class="dropdown-content">
+          <div class="dropdown-column">
+            <h4>Start Business</h4>
+            <a href="nidhicompany.html"><img src="icons/partnership.png" alt="">Nidhi Company</a>
+            <a href="Private Limited Company.html"><img src="icons/pvt-ltd.png" alt=""> Pvt. Ltd. Company Registration</a>
+            <a href="Section 8 Company.html"><img src="icons/section8.png" alt=""> Section 8 Company Registration</a>
+            <a href="LLP Registration.html"><img src="icons/section8.png" alt="">LLP Registration </a>
+            <a href="OPC Registration.html"><img src="icons/section8.png" alt=""> OPC Company Registration</a>
+            <a href="Society Registration.html"><img src="icons/section8.png" alt=""> Society Registration</a>
+            <a href="Startup India Registration.HTML"><img src="icons/section8.png" alt=""> Startup India Registration</a>
+            <a href="Trust Registration.html"><img src="icons/section8.png" alt=""> Trust Registration</a>
+          </div>
+       <div class="dropdown-column">
+    <h4 >Compliance</h4>
+    
+      <a href="Annual Compliance Pvt. Ltd.html"><img src="icons/annual-pvt.png" alt=""> Annual Compliance Pvt. Ltd.</a>
+      <a href="CMA Report Preparation.html"><img src="icons/cma.png" alt=""> CMA Report</a>
+      <a href="LLP Annual Filings.html"><img src="icons/cma.png" alt="">LLP Annual Filing</a>
+      <a href="Project Report.html"><img src="icons/cma.png" alt=""> Project Report</a>
+    
+</div>
+
+        </div>
+      </li>
+
+      <!-- REGISTRATION -->
+      <li class="dropdown">
+        <a href="#">Registration <i class="fa-solid fa-caret-down"></i></a>
+        <div class="dropdown-content">
+          <div class="dropdown-column">
+            <h4>Registration</h4>
+            <a href="gstr.html">GST Registration</a>
+            <a href="dsc.html">DSC Registration</a>
+            <a href="msme.html">MSME Registration</a>
+            <a href="Trade License.html">Trade License</a>
+            <a href="Food.html">Food License</a>
+            <a href="Gumasta.html">Gumasta License</a>
+            <a href="Trade License.html">Trade License</a>
+            <a href="ISO Certification.html">ISO Certification</a>
+            <a href="itrpage.html">Income Tax Registration</a>
+            <a href="trademark.html">Trademark Registration</a>
+            <a href="Import Export License.html">Import & Export License</a>
+          </div>
+        </div>
+      </li>
+
+      <!-- FILING & MORE -->
+      <li class="dropdown">
+        <a href="#">Filing & More <i class="fa-solid fa-caret-down"></i></a>
+        <div class="dropdown-content">
+          <div class="dropdown-column">
+            <h4>GST</h4>
+            <a href="gstrf.html">GST Return Filing</a>
+            <a href="pfreturn.html">PF Return Filing</a>
+            <a href="TDS Return Filing.html">TDS Return Filing</a>
+            <a href="gstculcutor.html">GST Calculator</a>
+          </div>
+          
+        <div class="dropdown-column">
+      <h4>Accounting</h4>
+      <div > 
+        <a href="Online Accounting html.html">Accounting</a>
+      </div>
+    </div>
+        </div>
+      </li>
+      <!-- <li class="dropdown">
+  <a href="#">Filing & More <i class="fa-solid fa-caret-down"></i></a>
+
+  <div class="dropdown-content">
+
+      <div class="dropdown-column">
+        <h4 class="sub-toggle">GST</h4>
+        <div class="sub-items">
+          <a href="gstrf.html">GST Return Filing</a>
+          <a href="pfreturn.html">PF Return Filing</a>
+          <a href="TDS Return Filing.html">TDS Return Filing</a>
+          <a href="gstculcutor.html">GST Calculator</a>
+        </div>
+      </div>
+
+      <div class="dropdown-column">
+        <h4 class="sub-toggle">Accounting</h4>
+        <div class="sub-items">
+          <a href="Online Accounting html.html">Accounting</a>
+        </div>
+      </div>
+
+  </div>
+</li>
+ -->
+
+
+      <!-- DRAFTING -->
+      <li class="dropdown">
+        <a href="#">Change In Business<i class="fa-solid fa-caret-down"></i></a>
+        <div class="dropdown-content">
+          <div class="dropdown-column">
+            <h4>Change In Business</h4>
+            <a href="Add Director (company).html">Add Director</a>
+            <a href="Add Partner (Company).html">Add Partner</a>
+            <a href="llp Address Amendment out of state.html">Address Amendment Out Of State</a>
+            <a href="Close LLP.html">Close LLP</a>
+            <a href="Company Name Search.html">Company Name Search</a>
+            <a href="llp Address Amendment Within state .html">Address Amendment With In State</a>
+            <a href="Remove Director (Company).html">Remove Director</a>
+            <a href="Remove Partner (LLP).html">Remove Partner</a>
+          </div>
+        </div>
+      </li>
+
+      <!-- OTHER SERVICES -->
+      <li class="dropdown">
+        <a href="#">Other Services <i class="fa-solid fa-caret-down"></i></a>
+        <div class="dropdown-content">
+          <div class="dropdown-column">
+            <h4>Other</h4>
+            <a href="Balance Sheet.html">Balance Sheet</a>
+            <a href="NOC .html">NOC</a>
+            <a href="pan&tan Registration.html">PAN/TAN Registration</a>
+            <a href="Rent Agreement.html">Rent Agreement</a>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+
+<!-- <script>
+// Prevent dropdown click on desktop
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 768) {
+    document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('active'));
+  }
+});
+</script> -->
+
+<script>
+// Toggle hamburger
+const toggle = document.querySelector('.hamburger');
+const menu = document.querySelector('.menu');
+toggle.addEventListener('click', () => {
+  menu.classList.toggle('open');
+  toggle.classList.toggle('active');
+});
+
+// Mobile dropdown toggle (one open at a time)
+const dropdowns = document.querySelectorAll('.dropdown > a');
+dropdowns.forEach(link => {
+  link.addEventListener('click', e => {
+    if (window.innerWidth <= 768) {
+      e.preventDefault();
+      const parent = link.parentElement;
+      document.querySelectorAll('.dropdown').forEach(d => {
+        if (d !== parent) d.classList.remove('active');
+      });
+      parent.classList.toggle('active');
+    }
+  });
+});
+</script>
+
+    
+      <!-- Optional banner section -->
+      <section class="banner">
+        <div class="overlay">
+          <h1>Welcome to ITR Solution</h1>
+        </div>
+      </section>
+<!-- JS: Toggle Menu -->
+     
+
+
+  <section class="compliance-section">
+  <div class="container mx-auto px-4 py-12 md:flex md:space-x-8">
+    <div class="content-block md:w-1/2 mb-8 md:mb-0">
+      <h2 class="text-3xl font-bold text-gray-800 mb-4">E-Filing Income Tax</h2>
+       <p class="text-gray-600 leading-relaxed mt-4">
+Get complete tax filing assistance for income, 
+            capital gains, business, professional, or 
+            property taxes. Access all-inclusive tax return 
+            services easily at your convenience.
+      </p> 
+      <p class="text-gray-600 leading-relaxed mt-4">
+ Documenting income tax returns is 
+                each resident's obligation. The IT 
+                division confirms these assertions of 
+                salary and if any sum has been paid in 
+                abundance, the office discounts the sum 
+                to the concerned person's financial balance. 
+                Ensure your safe and secure filing of all 
+                income tax and become a responsible 
+                citizen. ITR Solution helps you not miss any 
+                important documents and get things done 
+                for you in a few clicks.
+      </p>   
+      <p class="text-gray-600 leading-relaxed mt-4">
+ An income tax return is an official document 
+                    through which taxpayers report their taxable 
+                    income, deductions, and tax payments to the 
+                    government. The process of submitting this 
+                    document is known as income tax filing. 
+                    During filing, the total tax liability is 
+                    calculated, and if excess tax has been 
+                    paid during the financial year, the Income Tax Department will 
+                    process a refund for the excess amount.
+      </p>
+    </div>
+
+    <div class="form-block md:w-1/2">
+  <div class="bg-white shadow-lg rounded-lg p-8">
+    <h2 class="text-2xl font-semibold text-gray-800 mb-6 flex items-center">
+      <img src="images/blutte.png" alt="Icon" class="w-8 h-8 mr-2"> Contact Us
+    </h2>
+    <form id="contactForm">
+      <div class="mb-4">
+        <label for="name" class="block text-gray-700 font-medium mb-2">Name*</label>
+        <input type="text" id="name" name="name" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter Your Full Name*" required>
+      </div>
+      <div class="mb-4">
+        <label for="contact" class="block text-gray-700 font-medium mb-2">Contact Number*</label>
+        <input type="text" id="contact" name="contact" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter Your Contact Number*" required>
+      </div>
+      <div class="mb-4">
+        <label for="email" class="block text-gray-700 font-medium mb-2">Email-Id*</label>
+        <input type="email" id="email" name="email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter Your Email-Id*" required>
+      </div>
+      <div class="mb-6">
+        <label for="city" class="block text-gray-700 font-medium mb-2">City*</label>
+        <input type="text" id="city" name="city" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter Your City*" required>
+      </div>
+      <button type="submit" class="w-full bg-yellow-400 text-white p-3 rounded-lg hover:bg-yellow-500 transition duration-300">Submit</button>
+    </form>
+  </div>
+</div>
+  </div>
+</section>
+  
+
+
+<section class="grp">
+    <div class="gp">
+            <img src="images/clients.png">
+            <h1>2000+</h1>
+            <p>clients</p>
+            
+        </div>
+
+        <div class="gp">
+            <img src="images/client emoji png.png">
+            <h1>1853+</h1>
+            <p>Happy Clients</p>
+         
+        </div>
+
+        <div class="gp">
+            <img src="images/team.png">
+            <h1>50+</h1>
+            <p>Expert Team</p>
+           
+     </div>
+
+     <div class="gp">
+        <img src="images/sevices.png">
+        <h1>51+</h1>
+    <p>Services</p>
+    </div>
+</section>
+
+
+
+<section class="plan-toggle">
+  <button id="salariedBtn" class="active">Salaried</button>
+  <button id="businessBtn">Business</button>
+</section>
+
+<section class="plan-section" id="planContainer"></section>
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="script.js"></script>
+
+
+<section class="itrib1">
+    <div class="itrib11">
+        <h1><img src="images/blutte.png"> Advantages of Choosing ITR Solution for</h1>
+        <h1>E-Filing Income Tax Returns</h1>
+        <div class="line1"></div>
+    </div>
+   
+</section>
+
+<section class="itrtext12">
+    <div class="itrtext21">
+        <h1 class="itrtext22">Efficient Time Saving</h1>
+        <h1 class="itrtext23">Comfort of Filing From Anywhere</h1>
+        <h1 class="itrtext22">Simple, Easy and Faster Process</h1>
+        <h1 class="itrtext23">Avoid Penaltie Fees</h1>
+        <h1 class="itrtext22">Obtaining Valid Documentation</h1>
+        <h1 class="itrtext23">Best Virtual Assistance</h1>
+    </div>
+    
+        <img class="itrmg" src="images/image for adv.png">
+    
+</section>
+
+ <section class="regulatory-services">
+  <div class="container mx-auto px-4 py-12">
+    <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">E-Filing of Income Tax Returns for Individuals and Businessess</h2>
+    <div class="max-w-4xl mx-auto">
+        <p class="text-gray-600 leading-relaxed mb-4">
+Income tax filing is a crucial obligation for all taxpayers, whether individuals or business owners. 
+            Eligibility for income tax is determined based on an individual's age and gross annual income. To 
+            file an Income Tax Return (ITR), individuals and businesses must use the appropriate form, such 
+            as ITR-3 or ITR-4, depending on their income sources and tax classification.
+      </p>
+         <p class="text-gray-600 leading-relaxed mb-4">
+D ITR-4 income is determined using either the presumptive tax method or the conventional approach. 
+                Filing an ITR helps maintain accurate tax records, ensures compliance, and tracks taxes paid based 
+                on the applicable income slab. 
+      </p>
+        <p class="text-gray-600 leading-relaxed mb-4">Every business or company is required to file income tax returns, even in the case of financial losses. 
+                    However, self-employed individuals are exempt from filing tax returns for that year if their income falls 
+                    below the taxable threshold. Additionally, late filing fees apply to both individuals and businesses.</p>
+      <p class="text-gray-600 leading-relaxed mb-4">
+E-filing offers taxpayers speed, security, and convenience while saving time. Additionally, it streamlines 
+                        the process for the Income Tax Department by providing a digital alternative to traditional paper filing, 
+                        reducing administrative burdens.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+ <section class="key-benefits py-12 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="flex items-center justify-center mb-6">
+        <i class="fa-solid fa-play text-yellow-500 mr-2"></i>
+        <h2 class="text-3xl font-bold text-gray-800">Here are some key points regarding ITR E-filing 
+        for individuals and businesses</h2>
+      </div>
+      <div class="w-16 h-1 bg-yellow-400 mx-auto mb-8"></div>
+      <div class="flex flex-col md:flex-row md:space-x-8">
+        <div class="md:w-1/2 mb-8 md:mb-0">
+          <ul class="space-y-4">
+            <li class="flex items-start">
+              <i class="fa-solid fa-star text-yellow-400 mr-2 mt-1"></i>
+              <span class="text-gray-700">Time Efficiency</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa-solid fa-star text-yellow-400 mr-2 mt-1"></i>
+              <span class="text-gray-700">Hassle-Free Experience</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa-solid fa-star text-yellow-400 mr-2 mt-1"></i>
+              <span class="text-gray-700">Alternative to Traditional Filing</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa-solid fa-star text-yellow-400 mr-2 mt-1"></i>
+              <span class="text-gray-700">User-Friendly Interface</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa-solid fa-star text-yellow-400 mr-2 mt-1"></i>
+              <span class="text-gray-700">Simplified Verification</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa-solid fa-star text-yellow-400 mr-2 mt-1"></i>
+              <span class="text-gray-700">Real-Time Tracking</span>
+            </li>
+          </ul>
+        </div>
+        <div class="md:w-1/2">
+          <img src="images/keypoint img.png" alt="Benefits" class="w-[500px] h-[500px]  rounded-lg shadow-md">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+
+  <section class="px-4 sm:px-6 lg:px-12 py-12 bg-white">
+  <!-- Section Header -->
+  <div class="text-center mb-10">
+    <h1 class="text-2xl sm:text-3xl font-bold text-gray-800 flex items-center justify-center gap-2">
+      <img src="images/blutte.png" alt="icon" class="w-6 h-6 sm:w-8 sm:h-8">
+      Importance of Timely Income Tax E-Filing
+    </h1>
+    <div class="w-24 h-1 bg-yellow-500 mx-auto mt-3"></div>
+  </div>
+
+  <!-- Content Section -->
+  <div class="max-w-5xl mx-auto space-y-8 text-gray-700">
+    <!-- Item 1 -->
+    <div>
+      <h2 class="text-xl font-semibold flex items-center gap-2 text-gray-900">
+        <i class="fa-solid fa-circle text-yellow-500 text-xs"></i>
+        Avoiding Penalties and Legal Consequences
+      </h2>
+      <p class="mt-2 text-base leading-relaxed">
+        Failure to file income tax returns on time can result in penalties, interest charges, and legal complications.
+        Tax authorities impose fines for late submissions, which can escalate over time, creating an unnecessary
+        financial burden.
+      </p>
+    </div>
+
+    <!-- Item 2 -->
+    <div>
+      <h2 class="text-xl font-semibold flex items-center gap-2 text-gray-900">
+        <i class="fa-solid fa-circle text-yellow-500 text-xs"></i>
+        Faster Processing and Refunds
+      </h2>
+      <p class="mt-2 text-base leading-relaxed">
+        E-filing allows for quicker processing of tax returns, leading to faster refunds. Taxpayers who file early often
+        receive their refunds sooner than those who wait until the deadline.
+      </p>
+    </div>
+
+    <!-- Item 3 -->
+    <div>
+      <h2 class="text-xl font-semibold flex items-center gap-2 text-gray-900">
+        <i class="fa-solid fa-circle text-yellow-500 text-xs"></i>
+        Improved Financial Planning
+      </h2>
+      <p class="mt-2 text-base leading-relaxed">
+        Timely tax filing enables better financial planning by providing a clear picture of one’s income, liabilities, and
+        potential deductions. This ensures effective budget management and reduces last-minute financial stress.
+      </p>
+    </div>
+
+    <!-- Item 4 -->
+    <div>
+      <h2 class="text-xl font-semibold flex items-center gap-2 text-gray-900">
+        <i class="fa-solid fa-circle text-yellow-500 text-xs"></i>
+        Maintaining a Good Compliance Record
+      </h2>
+      <p class="mt-2 text-base leading-relaxed">
+        A consistent track record of timely tax filing enhances credibility with financial institutions. This can be
+        beneficial when applying for loans, credit cards, or other financial services where tax returns are required
+        as proof of income.
+      </p>
+    </div>
+
+    <!-- Item 5 -->
+    <div>
+      <h2 class="text-xl font-semibold flex items-center gap-2 text-gray-900">
+        <i class="fa-solid fa-circle text-yellow-500 text-xs"></i>
+        Reduced Risk of Errors
+      </h2>
+      <p class="mt-2 text-base leading-relaxed">
+        Filing taxes early minimizes the chances of errors and allows time for necessary corrections. Last-minute
+        rushes often lead to miscalculations or overlooked deductions, which can result in audits or financial
+        discrepancies.
+      </p>
+    </div>
+
+    <!-- Item 6 -->
+    <div>
+      <h2 class="text-xl font-semibold flex items-center gap-2 text-gray-900">
+        <i class="fa-solid fa-circle text-yellow-500 text-xs"></i>
+        Contribution to National Development
+      </h2>
+      <p class="mt-2 text-base leading-relaxed">
+        Taxes play a crucial role in national development by funding essential public services such as infrastructure,
+        healthcare, and education. Timely tax compliance ensures a steady flow of revenue for these initiatives.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+  
+<section class="px-4 sm:px-6 lg:px-12 py-12 bg-gray-50">
+  <!-- Section Header -->
+  <div class="text-center mb-10">
+    <h1 class="text-2xl sm:text-3xl font-bold text-gray-800 flex items-center justify-center gap-2">
+      <img src="images/blutte.png" alt="icon" class="w-6 h-6 sm:w-8 sm:h-8">
+      Why Choose ITR Solution for Income Tax E-Filing?
+    </h1>
+  </div>
+
+  <!-- Grid Section -->
+  <div class="max-w-6xl mx-auto grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+    <!-- Card 1 -->
+    <div class="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-lg transition">
+      <h1 class="text-3xl font-bold text-yellow-500 mb-3">1</h1>
+      <h2 class="text-xl font-semibold text-gray-800 mb-2">Expertise & Accuracy</h2>
+      <p class="text-gray-600 text-base leading-relaxed">
+        Our experienced tax professionals ensure accurate filings, reducing the risk of errors, audits, and penalties.
+        We stay updated with the latest tax laws to provide precise guidance.
+      </p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-lg transition">
+      <h1 class="text-3xl font-bold text-yellow-500 mb-3">2</h1>
+      <h2 class="text-xl font-semibold text-gray-800 mb-2">Hassle-Free Online Process</h2>
+      <p class="text-gray-600 text-base leading-relaxed">
+        Enjoy a simple and smooth online process that saves time, ensures accuracy, and allows you to complete tasks
+        from anywhere with ease.
+      </p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-lg transition">
+      <h1 class="text-3xl font-bold text-yellow-500 mb-3">3</h1>
+      <h2 class="text-xl font-semibold text-gray-800 mb-2">Maximized Tax Benefits</h2>
+      <p class="text-gray-600 text-base leading-relaxed">
+        Our experts help you claim eligible deductions and exemptions to maximize your tax savings while staying compliant
+        with the law.
+      </p>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-lg transition">
+      <h1 class="text-3xl font-bold text-yellow-500 mb-3">4</h1>
+      <h2 class="text-xl font-semibold text-gray-800 mb-2">Cost-Effective Solutions</h2>
+      <p class="text-gray-600 text-base leading-relaxed">
+        We offer quality services at affordable prices — ensuring accuracy, efficiency, and value for your money.
+      </p>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-lg transition">
+      <h1 class="text-3xl font-bold text-yellow-500 mb-3">5</h1>
+      <h2 class="text-xl font-semibold text-gray-800 mb-2">Timely Filing & Compliance</h2>
+      <p class="text-gray-600 text-base leading-relaxed">
+        We ensure timely filing and compliance to help you avoid penalties and maintain a good tax record with minimal effort.
+      </p>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-lg transition">
+      <h1 class="text-3xl font-bold text-yellow-500 mb-3">6</h1>
+      <h2 class="text-xl font-semibold text-gray-800 mb-2">Dedicated Customer Support</h2>
+      <p class="text-gray-600 text-base leading-relaxed">
+        Get reliable, responsive, and friendly support from our team — we’re always here to assist you with your tax needs.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+ 
+
+
+
+<section class="footer1">
+
+<div class="ft1">
+    <img src="images/logo.png">
+</div>
+
+<div class="ft4">
+    
+        <nav>
+            <ul>
+                <h1>Quick Links</h1>
+                <li><a href="#">Home <i class="fa-solid fa-caret-down"></i></a></a></li>
+                <li><a href="#">About Us <i class="fa-solid fa-caret-down"></i></a></a></li>
+                <li><a href="#">Contact Us <i class="fa-solid fa-caret-down"></i></a></a></li>
+            </ul>
+        </nav>
+    
+</div>
+
+<div class="ft3">
+    <ul>
+        <h1>Contact Us</h1>
+        <li><i class="fa-solid fa-phone ikn"></i> +91 77710 22251</li>
+            
+    
+                <li><i class="fa-solid fa-envelope ikn"></i> itrsolution551@gmail.com</li>
+                   
+</ul>
+
+</div>
+
+</section>
+
+
+<section class="last">
+
+<div class="lt1">
+    <h3>Copyright(c) | ITR Solution All rights reserved</h3>
+</div>
+
+<div class="lt2">
+    
+    <nav>
+        <ul>
+            <li><a href="#">Terms & Condition</a> |</li>
+            <li><a href="#">Privacy Policy </a> |</li>
+            <li><a href="#">Refund & Cancellation</a></li>
+        </ul>
+    </nav>
+
+</div>
+
+</section>
+
+
+</body>
+</html>

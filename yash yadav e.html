@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yadav</title>
+
+
+                 <link href="style.css" type="text/css" rel="stylesheet">
+    <link href="fontawesome-free-6.7.1-web/css/all.css" type="text/css" rel="stylesheet">
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/4.0.2/bootstrap-material-design.umd.min.js" integrity="sha512-dG5ZzvFUfkBdjYdJbsKdGGh8tOa9fv9wHmiChCFJYHRIW1XgfxN2cGzt2HaEPeunXqbAQXBOJvSBQpGOl0qikw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+
+</head>
+<body>
+
+    
+    <section class="topbar">
+        
+
+        <div class="t1">
+            <ul>
+                <li><i class="fa-solid fa-phone"></i></li>
+                    <li>+91 77710 22251</li>
+            
+                        <li><i class="fa-solid fa-envelope"></i></li>
+                            <li>itrsolution551@gmail.com</li>
+    </ul>
+
+    </div>
+
+    <div class="t2">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    </section>
+
+    <section class="lm">
+      <div class="logo">
+        <img src="images/logo.png" alt="Logo" />
+        <div class="hamburger" onclick="toggleMenu(this)">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+  <div class="menu" id="navMenu">
+    <ul>
+      <li class="dropdown">
+        <a href="#">Start Business <i class="fa-solid fa-caret-down"></i></a>
+        <div class="dropdown-content">
+          <div class="dropdown-column">
+            <h4>Start Business</h4>
+            <a href="#"><img src="icons/partnership.png" alt=""> Partnership Deed</a>
+            <a href="#"><img src="icons/pvt-ltd.png" alt=""> Pvt. Ltd. Company Registration</a>
+            <a href="#"><img src="icons/section8.png" alt=""> Section 8 Company Registration</a>
+            <a href="#"><img src="icons/llp.png" alt=""> LLP Registration</a>
+            <a href="#"><img src="icons/opc.png" alt=""> OPC Company Registration</a>
+          </div>
+          <div class="dropdown-column">
+            <h4>Compliance</h4>
+            <a href="#"><img src="icons/annual-llp.png" alt=""> Annual Compliance LLP</a>
+            <a href="#"><img src="icons/annual-pvt.png" alt=""> Annual Compliance Pvt. Ltd.</a>
+            <a href="#"><img src="icons/cma.png" alt=""> CMA Report</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="dropdown">
+        <a href="#">Registration <i class="fa-solid fa-caret-down"></i></a>
+        <div class="dropdown-content">
+          <a href="#">GST Registration</a>
+          <a href="#">MSME Registration</a>
+          <a href="#">Trade License</a>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="#">Filing & More <i class="fa-solid fa-caret-down"></i></a>
+        <div class="dropdown-content">
+          <a href="#">GST Registration</a>
+          <a href="#">MSME Registration</a>
+          <a href="#">Trade License</a>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="#">Drafting <i class="fa-solid fa-caret-down"></i></a>
+        <div class="dropdown-content">
+          <a href="#">GST Registration</a>
+          <a href="#">MSME Registration</a>
+          <a href="#">Trade License</a>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="#">Other Services <i class="fa-solid fa-caret-down"></i></a>
+        <div class="dropdown-content">
+          <a href="#">GST Registration</a>
+          <a href="#">MSME Registration</a>
+          <a href="#">Trade License</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <script>
+    // Mobile toggle button
+    const toggle = document.querySelector('.hamburger');
+    const menu = document.querySelector('.menu ul');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+
+    // Dropdown toggle for mobile
+    const dropdowns = document.querySelectorAll('.dropdown > a');
+    dropdowns.forEach(link => {
+      link.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          const parent = link.parentElement;
+          parent.classList.toggle('active');
+        }
+      });
+    });
+  </script>
+
+    </section>
+    
+      <!-- Optional banner section -->
+      <section class="banner">
+        <div class="overlay">
+          <h1>Welcome to ITR Solution</h1>
+        </div>
+      </section>
+<!-- JS: Toggle Menu -->
+      <script>
+        function toggleMenu(icon) {
+          document.getElementById("navMenu").classList.toggle("open");
+          icon.classList.toggle("active");
+        }
+      </script>
+
+
+   <section class="compliance-section">
+  <div class="container mx-auto px-4 py-12 md:flex md:space-x-8">
+    <div class="content-block md:w-1/2 mb-8 md:mb-0">
+      <h2 class="text-3xl font-bold text-gray-800 mb-4">Online Accounting and Bookkeeping Services</h2>
+<p class="text-gray-600 leading-relaxed mt-4">
+Online accounting refers to the use of cloud-
+based software and digital platforms to manage 
+a business's financial records, transactions, and 
+reporting in real time. Unlike traditional 
+accounting methods that rely on offline tools or 
+manual entries, online accounting allows users 
+to access financial data from anywhere with an 
+internet connection. This modern approach 
+helps streamline tasks such as invoicing, 
+expense tracking, bank reconciliation, and tax 
+preparation, improving efficiency and accuracy.
+</p>
+      <p class="text-gray-600 leading-relaxed mt-4">
+  One of the biggest advantages of online 
+accounting is real-time data access and 
+automation. Business owners and accountants 
+can collaborate on the same platform, update 
+records instantly, and generate reports with a 
+few clicks. Many platforms also integrate with 
+bank feeds and other business apps, reducing 
+manual entry and the risk of errors. With 
+enhanced data security, regular backups, 
+and compliance features, online accounting 
+has become an essential tool for startups, small 
+businesses, and growing enterprises.
+      </p>
+    </div>
+
+    <div class="form-block md:w-1/2">
+      <div class="bg-white shadow-lg rounded-lg p-8">
+        <h2 class="text-2xl font-semibold text-gray-800 mb-6 flex items-center">
+          <img src="images/blutte.png" alt="Icon" class="w-8 h-8 mr-2"> Contact Us
+        </h2>
+        <div>
+          <div class="mb-4">
+            <label for="name" class="block text-gray-700 font-medium mb-2">Name*</label>
+            <input type="text" id="name" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter Your Full Name*" required>
+          </div>
+          <div class="mb-4">
+            <label for="contact" class="block text-gray-700 font-medium mb-2">Contact Number*</label>
+            <input type="text" id="contact" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter Your Contact Number*" required>
+          </div>
+          <div class="mb-4">
+            <label for="email" class="block text-gray-700 font-medium mb-2">Email-Id*</label>
+            <input type="email" id="email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter Your Email-Id*" required>
+          </div>
+          <div class="mb-6">
+            <label for="city" class="block text-gray-700 font-medium mb-2">City*</label>
+            <input type="text" id="city" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter Your City*" required>
+          </div>
+          <button type="submit" class="w-full bg-yellow-400 text-white p-3 rounded-lg hover:bg-yellow-500 transition duration-300">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+
+
+<section class="grp">
+    <div class="gp">
+            <img src="images/clients.png">
+            <h1>2000+</h1>
+            <p>clients</p>
+            
+        </div>
+
+        <div class="gp">
+            <img src="images/client emoji png.png">
+            <h1>1853+</h1>
+            <p>Happy Clients</p>
+         
+        </div>
+
+        <div class="gp">
+            <img src="images/team.png">
+            <h1>50+</h1>
+            <p>Expert Team</p>
+           
+     </div>
+
+     <div class="gp">
+        <img src="images/sevices.png">
+        <h1>51+</h1>
+    <p>Services</p>
+    </div>
+</section>
+
+
+<section class="regulatory-services">
+  <div class="container mx-auto px-4 py-12">
+    <!-- <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Your Trusted Compliance Partner</h2> -->
+    <div class="max-w-4xl mx-auto">
+         <p class="text-gray-600 leading-relaxed mb-4">
+Another major benefit of online accounting is cost-effectiveness. Businesses no longer need to invest in 
+expensive desktop software, IT infrastructure, or dedicated servers. Most cloud-based accounting tools 
+are subscription-based, allowing businesses to pay only for the features they need. Updates, security 
+patches, and system maintenance are handled by the service provider, saving time and reducing overhead.
+      </p>
+        <p class="text-gray-600 leading-relaxed mb-4">Data security and backup are also key strengths of online accounting platforms. These systems use 
+encrypted connections and secure servers to protect sensitive financial data. Automatic backups ensure 
+that records are not lost due to hardware failure or accidental deletion. This provides peace of mind for 
+business owners who need to comply with data protection regulations and maintain long-term financial 
+records.</p>
+      <p class="text-gray-600 leading-relaxed mb-4">
+Online accounting tools often come with smart dashboards and analytics that offer valuable business 
+insights. Users can track cash flow, monitor overdue payments, analyze income and expenses, and make 
+informed financial decisions. Some software also includes features like budgeting, inventory management, 
+and multi-currency support, making them suitable for both local and international businesses.
+      </p>
+      <p class="text-gray-600 leading-relaxed mb-4">
+Finally, compliance and tax readiness are easier to manage with online accounting. These platforms are 
+regularly updated to reflect the latest tax laws and regulatory changes. They can generate GST reports, 
+TDS summaries, and other filings required by authorities. This reduces the risk of errors during tax season 
+and ensures that the business remains compliant with minimal effort.
+      </p>
+    </div>
+  </div>
+</section>
+
+        <section class="itrib1">
+            <div class="itrib11">
+                <h1><img src="images/blutte.png"> Documents & Pricing </h1>
+              <div class="line1"></div>
+            </div>
+        </section>
+
+        <section class="dp">
+            <div class="dp1">
+                <ul>
+                    <div class="itrkeypoint1">
+        <h1><i class="fa-solid fa-play bl2"></i>Documents Required for Online Accounting
+</h1>
+<div class="itrkeys"> <li><h1>Monthly Requirements:
+</h1></li>
+                    <li><h1>✅ Bank Statements – Monthly bank transaction records
+</h1></li>
+                    <li><h1>✅ Sales Invoices / Service Invoices – All issued invoices for goods sold or services rendered
+</h1></li>
+                    <li><h1>✅ Purchase Invoices – Bills for all business-related purchases
+</h1></li>
+                    <li><h1>✅ Expense Records – Supporting documents such as bills or vouchers for all incurred expenses
+</h1></li>
+                    <li><h1>✅ Income Records – Documents or statements detailing all business income
+</h1></li>
+                    <li><h1>✅ Loan Statements – Monthly or quarterly loan account summaries
+</h1></li>
+                    <li><h1>✅ Previous Year’s Balance Sheet / Audit Report – Financial report from the last financial year
+</h1></li>
+                    <li><h1>✅ Previous Year’s Tally Data – Backup or exported data from Tally software
+</h1></li>
+                    <li><h1>✅ Asset Purchase Invoices – Bills for any fixed assets purchased
+</h1></li>
+                    <li><h1>✅ Closing Stock Summary (as of 31st March) – Inventory valuation and quantity report at the end of the financial year
+</h1></li>
+                    </ul>
+            </div>
+            <div class="dp4">
+            <div class="dp2">
+                <h1>Market Price: <strike> &#8377 22665/-</strike></h1>
+                <h1>ITR Solution: &#8377 16999/-</h1>
+                <h4>Save Up to 25%</h4>
+            </div>
+                <div class="dp3">
+                <img src="images/docmnt img.png"></div>
+            </div>
+            
+        </section>
+        <form>
+            <h1 class="fh"><img src="images/blutte.png">Contact Us</h1>
+            
+            <!-- Existing Fields -->
+            <h1>Name*</h1>
+            <input type="text" class="t1" placeholder="Enter Your Full Name*" required>
+          
+            <h1>Select Duration*</h1> 0-500 
+            <select class="pricing-dropdown" required>
+              <option value="">-- Select Plan --</option>
+              <option value="1year">1 Year - ₹100</option>
+              <option value="2year">2 Years - ₹200</option>
+              <option value="2year">3 Years - ₹300</option>
+            </select>
+          
+            <!-- Continue Form Fields -->
+            <h1>Contact Number*</h1>
+            <input type="text" class="t2" placeholder="Enter Your Contact Number*" required>
+            ...
+          </form>
+          
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Transaction Plan</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+    }
+
+    .center-box {
+      position: absolute;
+      right: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      width: 90%;
+      max-width: 400px;
+    }
+
+    .center-box h2 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: #333;
+    }
+
+    .center-box select {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    #price-result {
+      font-size: 18px;
+      color: green;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="center-box">
+    <h2>Select Your Transaction Plan</h2>
+    <select id="transaction-select" required>
+      <option value="">-- Select Transactions Range --</option>
+      <option value="100">0 - 500 Transactions - ₹1200</option>
+      <option value="200">500 - 1500 Transactions - ₹2200</option>
+    </select>
+    <p id="price-result"></p>
+  </div>
+
+  <script>
+    const selectBox = document.getElementById('transaction-select');
+    const resultBox = document.getElementById('price-result');
+
+    selectBox.addEventListener('change', function () {
+      const price = this.value;
+      if (price) {
+        resultBox.textContent = `Selected Plan Price: ₹${price}`;
+      } else {
+        resultBox.textContent = '';
+      }
+    });
+  </script>
+
+</body>
+</html>
+
+        <div class="center-box">
+            <h2>Select Your Transaction Plan</h2>
+        
+            <select id="transaction-select" required>
+              <option value="">-- Select Transactions Range --</option>
+              <option value="100">0 - 500 Transactions - ₹100</option>
+              <option value="200">500 - 1500 Transactions - ₹200</option>
+            </select>
+        
+            <p id="price-result"></p>
+          </div>
+
+<section class="itrib1">
+    <div class="itrib11">
+        <h1><img src="images/blutte.png"> Advantages of Choosing ITR Solution for </h1>
+        <h1>Online Accounting</h1>
+        <div class="line1"></div>
+    </div>
+   
+</section>
+
+<section class="itrtext12">
+    <div class="itrtext21">
+        <h1 class="itrtext22">Efficient Time Saving</h1>
+        <h1 class="itrtext23">There is no Hidden Charges</h1>
+        <h1 class="itrtext22">Simple, Easy and Faster Process</h1>
+        <h1 class="itrtext23">Budget Friendly Service</h1>
+        <h1 class="itrtext22">Obtaining Valid Documentation</h1>
+        <h1 class="itrtext23">Best Virtual Assistance</h1>
+    </div>
+    
+        <img class="itrmg" src="images/image for adv.png">
+    
+</section>
+
+
+   <section class="common-errors py-12">
+    <div class="container mx-auto px-4">
+      <div class="flex items-center justify-center mb-6">
+        <img src="images/blutte.png" alt="Icon" class="w-8 h-8 mr-2">
+        <h2 class="text-3xl font-bold text-gray-800">How to Prevent Common Errors in Online Accounting</h2>
+      </div>
+      <div class="w-16 h-1 bg-yellow-400 mx-auto mb-8"></div>
+      <div class="flex flex-col md:flex-row md:space-x-8">
+        <div class="md:w-1/2 mb-8 md:mb-0">
+          <ul class="space-y-4">
+            <li class="flex items-start">
+              <i class="fa-solid fa-star text-yellow-400 mr-2 mt-1"></i>
+              <span class="text-gray-700">Keep Financial Data Updated Regularly</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa-solid fa-star text-yellow-400 mr-2 mt-1"></i>
+              <span class="text-gray-700">Reconcile Bank Statements Frequently</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa-solid fa-star text-yellow-400 mr-2 mt-1"></i>
+              <span class="text-gray-700">Use Automated Features Wisely</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa-solid fa-star text-yellow-400 mr-2 mt-1"></i>
+              <span class="text-gray-700">Double-Check Data Entries</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa-solid fa-star text-yellow-400 mr-2 mt-1"></i>
+              <span class="text-gray-700">Maintain Proper User Access Controls</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa-solid fa-star text-yellow-400 mr-2 mt-1"></i>
+              <span class="text-gray-700">Back Up Data Regularly</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa-solid fa-star text-yellow-400 mr-2 mt-1"></i>
+              <span class="text-gray-700">Seek Professional Assistance When Needed</span>
+            </li>
+          </ul>
+        </div>
+        <div class="md:w-1/2">
+          <img src="images/common errors pic.png" alt="Common Errors" class="w-[500px]  h-[500px] rounded-lg shadow-md">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+    <section class="significance py-12 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="flex items-center justify-center mb-6">
+        <img src="images/blutte.png" alt="Icon" class="w-8 h-8 mr-2">
+        <h2 class="text-3xl font-bold text-gray-800">Significance of Timely Online Accounting </h2>
+      </div>
+      <div class="w-16 h-1 bg-yellow-400 mx-auto mb-8"></div>
+      <div class="flex flex-col md:flex-row md:space-x-8">
+        <div class="md:w-1/2 mb-8 md:mb-0">
+          <ul class="space-y-6 text-gray-600 leading-relaxed">
+            <li>
+    Timely online accounting ensures that all financial transactions 
+are recorded promptly and accurately. This reduces the 
+chances of errors and discrepancies that often occur with 
+delayed entries. Real-time data capture allows businesses 
+to maintain reliable books, which form the foundation for 
+accurate financial reports, audits, and tax filings.
+            </li>
+            <li>
+ By updating accounts regularly, businesses gain a clear view 
+of their cash inflows and outflows at any given time. This 
+visibility helps in managing liquidity effectively—ensuring 
+that bills are paid on time, receivables are tracked promptly, 
+and potential cash shortages are anticipated well in 
+advance, reducing financial stress.
+            </li>
+            <li>Online accounting software often includes tools that 
+automatically update tax rates, generate compliance 
+reports, and send filing reminders. Timely accounting 
+makes it easier to meet regulatory deadlines, reducing 
+the risk of penalties, interest, or legal complications 
+associated with late or incorrect filings.
+            </li>
+            <li>
+                Up-to-date financial records enable business owners and managers to analyze performance trends, 
+forecast future revenues and expenses, and develop strategic plans with confidence. Timely online 
+accounting provides a strong financial foundation that supports business growth, investment decisions, 
+and resource allocation.
+            </li>
+          </ul>
+        </div>
+        <div class="md:w-1/2">
+          <img src="images/keypoint img.png" alt="Key Points" class="w-[500px] h-[500px]  rounded-lg shadow-md">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+    <section class="importance py-12">
+    <div class="container mx-auto px-4">
+      <div class="flex items-center justify-center mb-6">
+        <img src="images/blutte.png" alt="Icon" class="w-8 h-8 mr-2">
+        <h2 class="text-3xl font-bold text-gray-800">Importance of Online Accounting on Time</h2>
+      </div>
+      <div class="w-16 h-1 bg-yellow-400 mx-auto mb-8"></div>
+      <div class="max-w-4xl mx-auto">
+        <ul class="space-y-6 text-gray-600 leading-relaxed">
+            <li>Accurate and up-to-date financial data is essential for making informed business decisions. Timely online 
+accounting ensures that income, expenses, and cash flow are recorded in real time, allowing business 
+owners to respond quickly to changes in the market, plan for upcoming expenses, and identify growth 
+opportunities. Delays in updating financial records can result in missed insights and poor decision-making.
+            </li>
+          <li>
+Staying on top of your accounting using online tools helps ensure that all financial transactions are 
+recorded correctly and on time, which is critical for tax filings and statutory compliance. Most cloud-based 
+systems provide automated reminders and real-time reporting, reducing the risk of late submissions, 
+calculation errors, or penalties due to non-compliance with tax laws and regulatory deadlines.
+          </li>
+          <li>
+    Timely online accounting demonstrates that a business is professionally managed and financially 
+responsible. This builds trust with stakeholders such as investors, clients, lenders, and auditors. Whether 
+you're applying for a loan, pitching to investors, or participating in tenders, having current and organized 
+financial records strengthens your business credibility and opens doors to new opportunities.
+      </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+   <section class="key-benefits py-12 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="flex items-center justify-center mb-6">
+        <i class="fa-solid fa-play text-yellow-500 mr-2"></i>
+        <h2 class="text-3xl font-bold text-gray-800">Key Benefits of online Accounting on Time</h2>
+      </div>
+      <div class="w-16 h-1 bg-yellow-400 mx-auto mb-8"></div>
+      <div class="flex flex-col md:flex-row md:space-x-8">
+        <div class="md:w-1/2 mb-8 md:mb-0">
+          <ul class="space-y-4">
+            <li class="flex items-start">
+              <i class="fa-solid fa-star text-yellow-400 mr-2 mt-1"></i>
+              <span class="text-gray-700">Real-Time Financial Visibility</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa-solid fa-star text-yellow-400 mr-2 mt-1"></i>
+              <span class="text-gray-700">Better Cash Flow Management</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa-solid fa-star text-yellow-400 mr-2 mt-1"></i>
+              <span class="text-gray-700">Error Reduction Through Automation</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa-solid fa-star text-yellow-400 mr-2 mt-1"></i>
+              <span class="text-gray-700">Easier Tax Compliance</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa-solid fa-star text-yellow-400 mr-2 mt-1"></i>
+              <span class="text-gray-700">Improved Financial Planning</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa-solid fa-star text-yellow-400 mr-2 mt-1"></i>
+              <span class="text-gray-700">Enhanced Collaboration and Access</span>
+            </li>
+          </ul>
+        </div>
+        <div class="md:w-1/2">
+          <img src="images/common errors pic.png" alt="Benefits" class="w-[500px] h-[500px]  rounded-lg shadow-md">
+        </div>
+      </div>
+    </div>
+  </section>
+
+         <!-- Why Choose ITR Solution Section -->
+  <section class="why-itr py-12">
+    <div class="container mx-auto px-4">
+      <div class="flex items-center justify-center mb-6">
+        <img src="images/blutte.png" alt="Icon" class="w-8 h-8 mr-2">
+        <h2 class="text-3xl font-bold text-gray-800">Why Choose ITR Solution for Online Accounting ?</h2>
+      </div>
+      <div class="w-16 h-1 bg-yellow-400 mx-auto mb-8"></div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow-md text-center">
+          <h3 class="text-4xl font-bold text-yellow-500 mb-2">1</h3>
+          <h4 class="text-xl font-semibold text-gray-800 mb-2">Hassle-Free ISO Certification</h4>
+          <p class="text-gray-600">Register for ISO Certification easily via the
+        ITR Solution app or website by
+        providing basic details. Our
+        team will promptly assist you
+        with the next steps for a
+        seamless process.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md text-center">
+          <h3 class="text-4xl font-bold text-yellow-500 mb-2">2</h3>
+          <h4 class="text-xl font-semibold text-gray-800 mb-2">Hassle-Free Online Process</h4>
+          <p class="text-gray-600">Hassle-Free Online Process</h2>
+    <p>We provide a streamlined, 
+hassle-free online process 
+that saves time, ensures 
+accuracy, and allows you to 
+complete tasks from anywhere 
+with ease.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md text-center">
+          <h3 class="text-4xl font-bold text-yellow-500 mb-2">3</h3>
+          <h4 class="text-xl font-semibold text-gray-800 mb-2">Reliable Customer Care</h4>
+          <p class="text-gray-600">We offer reliable customer 
+care with prompt support, 
+clear guidance, and 
+dedicated assistance to 
+ensure a smooth and 
+hassle-free experience.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md text-center">
+          <h3 class="text-4xl font-bold text-yellow-500 mb-2">4</h3>
+          <h4 class="text-xl font-semibold text-gray-800 mb-2">Skilled Professionals</h4>
+          <p class="text-gray-600">Our skilled professionals bring 
+expertise and dedication to 
+deliver accurate, efficient, and 
+timely solutions tailored to 
+your needs.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md text-center">
+          <h3 class="text-4xl font-bold text-yellow-500 mb-2">5</h3>
+          <h4 class="text-xl font-semibold text-gray-800 mb-2">Punctual Support</h4>
+          <p class="text-gray-600">We provide punctual and 
+reliable support to quickly 
+address your concerns, 
+helping you stay on 
+schedule and maintain 
+smooth operations</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md text-center">
+          <h3 class="text-4xl font-bold text-yellow-500 mb-2">6</h3>
+          <h4 class="text-xl font-semibold text-gray-800 mb-2">Value-for-Money Services</h4>
+          <p class="text-gray-600">We deliver value-for-money services that balance quality and affordability, ensuring you get the best results within your budget.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section class="footer1">
+
+<div class="ft1">
+    <img src="images/logo.png">
+</div>
+
+<div class="ft4">
+    
+        <nav>
+            <ul>
+                <h1>Quick Links</h1>
+                <li><a href="#">Home <i class="fa-solid fa-caret-down"></i></a></a></li>
+                <li><a href="#">About Us <i class="fa-solid fa-caret-down"></i></a></a></li>
+                <li><a href="#">Contact Us <i class="fa-solid fa-caret-down"></i></a></a></li>
+            </ul>
+        </nav>
+    
+</div>
+
+<div class="ft3">
+    <ul>
+        <h1>Contact Us</h1>
+        <li><i class="fa-solid fa-phone ikn"></i> +91 77710 22251</li>
+            
+    
+                <li><i class="fa-solid fa-envelope ikn"></i> itrsolution551@gmail.com</li>
+                   
+</ul>
+
+</div>
+
+</section>
+
+
+<section class="last">
+
+<div class="lt1">
+    <h3>Copyright(c) | ITR Solution All rights reserved</h3>
+</div>
+
+<div class="lt2">
+    
+    <nav>
+        <ul>
+            <li><a href="#">Terms & Condition</a> |</li>
+            <li><a href="#">Privacy Policy </a> |</li>
+            <li><a href="#">Refund & Cancellation</a></li>
+        </ul>
+    </nav>
+
+</div>
+
+</section>
+
+
+</body>
+</html>
