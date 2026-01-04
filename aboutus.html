@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>About Us</title>
 
 
 
@@ -533,110 +533,155 @@ setInterval(moveSlide, 5000);
   </div>
 </section>
 
-<section class="bg-gray-50">
-
-  <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 px-4 md:px-6">
-
+<section class="py-16">
+  <div class="container mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+    
     <!-- Card 1 -->
-    <div class="flex flex-col items-center w-full relative">
-      <div class="bg-[#1D2939] rounded-2xl shadow-lg p-6 w-full flex flex-col items-center hover:-translate-y-2 hover:shadow-2xl transition-all duration-500">
-        <img src="images/clients.png" class="w-12 h-12 md:w-14 md:h-14 mb-3">
-        <p class="text-white text-base md:text-lg font-semibold">Clients</p>
-      </div>
-      <h1 class="text-2xl md:text-3xl font-extrabold text-[#F3B72F] mt-3 md:mt-4">
-        2000+
-      </h1>
+    <div class="gp bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
+      <img src="images/clients.png" class="mx-auto mb-4 w-16 h-16 animate-bounce" alt="Clients Icon">
+      <h1 class="text-4xl font-bold text-yellow-500 mb-2 count" data-target="2000">0</h1>
+      <p class="text-gray-300 uppercase tracking-wide">Clients</p>
     </div>
 
     <!-- Card 2 -->
-    <div class="flex flex-col items-center w-full relative">
-      <div class="bg-[#1D2939] rounded-2xl shadow-lg p-6 w-full flex flex-col items-center hover:-translate-y-2 hover:shadow-2xl transition-all duration-500">
-        <img src="images/client emoji png.png" class="w-12 h-12 md:w-14 md:h-14 mb-3">
-        <p class="text-white text-base md:text-lg font-semibold">Happy Clients</p>
-      </div>
-      <h1 class="text-2xl md:text-3xl font-extrabold text-[#F3B72F] mt-3 md:mt-4">
-        1853+
-      </h1>
+    <div class="gp bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
+      <img src="images/client emoji png.png" class="mx-auto mb-4 w-16 h-16 animate-bounce" alt="Happy Clients Icon">
+      <h1 class="text-4xl font-bold text-yellow-500 mb-2 count" data-target="1853">0</h1>
+      <p class="text-gray-300 uppercase tracking-wide">Happy Clients</p>
     </div>
 
     <!-- Card 3 -->
-    <div class="flex flex-col items-center w-full relative">
-      <div class="bg-[#1D2939] rounded-2xl shadow-lg p-6 w-full flex flex-col items-center hover:-translate-y-2 hover:shadow-2xl transition-all duration-500">
-        <img src="images/team.png" class="w-12 h-12 md:w-14 md:h-14 mb-3">
-        <p class="text-white text-base md:text-lg font-semibold">Expert Team</p>
-      </div>
-      <h1 class="text-2xl md:text-3xl font-extrabold text-[#F3B72F] mt-3 md:mt-4">
-        50+
-      </h1>
+    <div class="gp bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
+      <img src="images/team.png" class="mx-auto mb-4 w-16 h-16 animate-bounce" alt="Expert Team Icon">
+      <h1 class="text-4xl font-bold text-yellow-500 mb-2 count" data-target="50">0</h1>
+      <p class="text-gray-300 uppercase tracking-wide">Expert Team</p>
     </div>
 
     <!-- Card 4 -->
-    <div class="flex flex-col items-center w-full relative">
-      <div class="bg-[#1D2939] rounded-2xl shadow-lg p-6 w-full flex flex-col items-center hover:-translate-y-2 hover:shadow-2xl transition-all duration-500">
-        <img src="images/sevices.png" class="w-12 h-12 md:w-14 md:h-14 mb-3">
-        <p class="text-white text-base md:text-lg font-semibold">Services</p>
-      </div>
-      <h1 class="text-2xl md:text-3xl font-extrabold text-[#F3B72F] mt-3 md:mt-4">
-        51+
-      </h1>
+    <div class="gp bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
+      <img src="images/sevices.png" class="mx-auto mb-4 w-16 h-16 animate-bounce" alt="Services Icon">
+      <h1 class="text-4xl font-bold text-yellow-500 mb-2 count" data-target="51">0</h1>
+      <p class="text-gray-300 uppercase tracking-wide">Services</p>
     </div>
 
   </div>
-
 </section>
 
+<script>
+// Simple count-up animation for numbers
+const counters = document.querySelectorAll('.count');
+counters.forEach(counter => {
+  const updateCount = () => {
+    const target = +counter.getAttribute('data-target');
+    const count = +counter.innerText;
+    const increment = target / 200; // adjust speed
 
-
-<section class="abt2new">
-  <!-- Tailwind CSS CDN -->
-<script src="https://cdn.tailwindcss.com"></script>
-<div class="abt3nd max-w-3xl mx-auto px-4 sm:px-6 py-8 sm:py-12 lg:py-16 space-y-6 sm:space-y-8">
-
-  <!-- Main Heading with Icon -->
-  <h1 class="flex items-center text-2xl sm:text-3xl lg:text-4xl font-bold text-[#F3B72F] gap-2 sm:gap-3">
-    <img src="images/blutte.png" alt="Icon" class="w-7 h-7 sm:w-10 sm:h-10">
-    Great Legal Skills
-  </h1>
-
-  <!-- Subheadings -->
-  <!-- Subheadings -->
-<div class="abt12 space-y-1">
-
-  <!-- MOBILE: one line / DESKTOP: multiple lines -->
-  <div class="block sm:hidden text-gray-800 font-semibold text-lg leading-tight">
-    Delivering professional legal services with 3+ years of experience
-  </div>
-
-  <!-- DESKTOP VIEW -->
-  <div class="hidden sm:block space-y-1">
-    <h1 class="text-2xl lg:text-3xl font-semibold text-gray-800">Delivering professional</h1>
-    <h2 class="text-xl lg:text-2xl font-medium text-gray-700">legal services with</h2>
-    <h1 class="text-2xl lg:text-3xl font-semibold text-gray-800">3+ years of experience</h1>
-  </div>
-
-</div>
-
-
-  <!-- Paragraph -->
-  <p class="text-gray-600 text-sm sm:text-base lg:text-lg leading-relaxed">
-    With our expert guidance, you can seamlessly handle operations such as incorporation, government 
-    registrations, accounting, filings, annual compliances, and documentation. Our online chartered 
-    accountant services cover a wide range of professional solutions tailored to your needs. By choosing 
-    our platform, you gain access to customized services with just a few clicks. As India's leading 
-    provider of Business Assistance Services, we are committed to meeting all your legal and professional 
-    requirements.
-  </p>
-
-</div>
+    if(count < target){
+      counter.innerText = Math.ceil(count + increment);
+      setTimeout(updateCount, 15);
+    } else {
+      counter.innerText = target;
+    }
+  };
+  updateCount();
+});
+</script>
 
 
 
-    <div class="img23">
-      <img class="i1" src="images/gl pics 1.png" alt="Legal Image 1">
-      <img class="i2" src="images/gl pics.png" alt="Legal Image 2">
-      <img class="i3" src="images/gl pics 2.png" alt="Legal Image 3">
-    </div>
-  </section>
+
+    <!-- ------------------Legal--------------------- -->
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        animation: {
+          floatSlow: "float 6s ease-in-out infinite",
+          floatFast: "float 4s ease-in-out infinite",
+        },
+        keyframes: {
+          float: {
+            "0%, 100%": { transform: "translateY(0)" },
+            "50%": { transform: "translateY(-12px)" },
+          },
+        },
+      },
+    },
+  };
+</script>
+
+
+
+    <section class="py-20 px-4 bg-white">
+      <div
+        class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+      >
+        <!-- LEFT CONTENT -->
+        <div>
+          <!-- Small Heading -->
+          <h4 class="flex items-center gap-2 text-gray-700 font-semibold mb-4">
+            <img src="images/blutte.png" alt="Icon" class="w-6 h-6" />
+            Great Legal Skills
+          </h4>
+
+          <!-- Main Heading -->
+          <h1 class="text-3xl md:text-4xl font-bold text-gray-900 leading-snug">
+            Delivering professional
+            <span class="text-yellow-500"> legal services </span>
+            with <br class="hidden sm:block" />
+            <span class="font-extrabold">3+ years</span> of experience
+          </h1>
+
+          <!-- Description -->
+          <p class="mt-6 text-gray-600 leading-relaxed max-w-xl">
+            With our expert guidance, you can seamlessly handle operations such
+            as incorporation, government registrations, accounting, filings,
+            annual compliances, and documentation. Our online chartered
+            accountant services cover a wide range of professional solutions
+            tailored to your needs. By choosing our platform, you gain access to
+            customized services with just a few clicks. As India's leading
+            provider of Business Assistance Services, we are committed to
+            meeting all your legal and professional requirements.
+          </p>
+        </div>
+
+        <!-- RIGHT IMAGES -->
+        <div class="relative flex justify-center items-center">
+          <!-- Main Image -->
+          <div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
+            <img
+              src="images/gl pics.png"
+              alt="Legal Team"
+              class="w-[320px] md:w-[400px]"
+            />
+          </div>
+
+          <!-- Top Circular Image -->
+          <div
+            class="absolute -top-16 left-6 md:left-20 z-20 animate-floatSlow"
+          >
+            <img
+              src="images/gl pics 1.png"
+              alt="Team Meeting"
+              class="w-36 h-36 md:w-44 md:h-44 rounded-full border-[6px] border-yellow-400 shadow-xl object-cover transition transform duration-300 hover:scale-110"
+            />
+          </div>
+
+          <!-- Bottom Circular Image -->
+          <div
+            class="absolute -bottom-16 right-6 md:right-20 z-20 animate-floatFast"
+          >
+            <img
+              src="images/gl pics 2.png"
+              alt="Success"
+              class="w-36 h-36 md:w-44 md:h-44 rounded-full border-[6px] border-yellow-400 shadow-xl object-cover transition transform duration-300 hover:scale-110"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================END===================== -->
 
 <!-- TAILWIND & SWIPER CDN -->
 <!-- TAILWIND & SWIPER CDN -->
